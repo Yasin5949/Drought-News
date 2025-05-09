@@ -1,0 +1,28 @@
+function remover(){
+    document.querySelectorAll('.researcher').forEach((researcher)=>{
+        researcher.classList.remove('current');
+        researcher.classList.remove('next');
+    })
+}
+document.querySelectorAll('.researcher').forEach((researcher)=>{
+    researcher.addEventListener('click',()=>{
+        if(researcher.classList.contains('one')){
+            remover();
+            document.querySelector('.two').classList.add('next');
+            document.querySelector('.three').classList.add('next');
+            researcher.classList.add('current');
+        }
+        if(researcher.classList.contains('two')){
+            remover();
+            document.querySelector('.one').classList.add('next');
+            document.querySelector('.three').classList.add('next');
+            researcher.classList.add('current');
+        }
+        if(researcher.classList.contains('three')){
+            remover();
+            document.querySelector('.two').classList.add('next');
+            document.querySelector('.one').classList.add('next');
+            researcher.classList.add('current');
+        }
+    })
+})
