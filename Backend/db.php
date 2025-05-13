@@ -4,7 +4,7 @@ class Database
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "DroughtDB";
+    private $database = "droughtdb";
     private $conn;
     public function __constructor()
     {

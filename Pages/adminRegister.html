@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../Styles/adminRegister.css">
+</head>
+<body>
+    <div class="formContainer">
+        <form action="../Backend/register.php" method="POST">
+            <h1>register</h1>
+            <label for="Fname">
+                First Name:<input type="text" id="Fname" name="Fname">
+            </label><br>
+            <label for="Fname">
+                Last Name:<input type="text" id="Fname" name="Lname">
+            </label><br>
+            <label for="Fname">
+                Password:<input type="password" id="Fname" name="password">
+            </label><br>
+            <label for="Fname">
+                Confirm:<input type="password" id="Fname" name="confirm">
+            </label>
+            <input type="submit" id="registerBtn" name="registerBtn">
+        </form>
+    </div>
+</body>
+</html>
