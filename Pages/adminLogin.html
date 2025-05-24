@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="formContainer">
-        <form action="../Backend/login.php" method="POST">
+        <form id="loginForm">
             <h1>Login </h1>
             <label for="username">
                 username:<input type="text" id="username" name="username">
@@ -16,10 +16,10 @@
             <label for="password"><br>
                 password:<input type="password" id="password" name="password">
             </label><br>
-            <input type="submit" value="Login" name="Login" id="loginBtn">
+            <input type="button" value="Login" name="Login" id="loginBtn" onclick="logIn()">
         </form>
     </div>
     
-
+<script src="../Scripts/login-register.js"></script>
 </body>
 </html>

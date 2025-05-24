@@ -10,7 +10,7 @@ document.querySelectorAll('.researcher').forEach((researcher)=>{
             remover();
             document.querySelector('.one').innerHTML=`
                  <div class="imageContainer">
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/ya.webp" alt="">
             </div>
             <div class="nameContainer">pr.YASIN SHALO</div>
             <div class="aboutResearcher">
@@ -24,22 +24,24 @@ document.querySelectorAll('.researcher').forEach((researcher)=>{
             </div>
             `;
             document.querySelector('.two').innerHTML=`
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/femalere.webp" alt="">
             `;
             document.querySelector('.three').innerHTML=`
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/ayub.webp" alt="">
             `;
             document.querySelector('.two').classList.add('next');
             document.querySelector('.three').classList.add('next');
+                        document.querySelector('.researcherContainer').classList.remove('short');
+            document.querySelector('.allResearcher').classList.remove('all');
             researcher.classList.add('current');
         }
         if(researcher.classList.contains('two')){
             remover();
             researcher.innerHTML=`
             <div class="imageContainer">
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/femalere.webp" alt="">
             </div>
-            <div class="nameContainer">pr.YASIN SHALO</div>
+            <div class="nameContainer">pr.Bezawit</div>
             <div class='aboutResearcher'>
         <h3>Professor Bezawit</h3>
         <h2>Leading Expert in Drought Science & Climate Resilience</h2>
@@ -64,11 +66,13 @@ document.querySelectorAll('.researcher').forEach((researcher)=>{
             `;
             document.querySelector('.one').classList.add('next');
             document.querySelector('.one').innerHTML=`
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/ya.webp" alt="">
             `;
             document.querySelector('.three').innerHTML=`
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/ayub.webp" alt="">
             `;
+                        document.querySelector('.researcherContainer').classList.remove('short');
+            document.querySelector('.allResearcher').classList.remove('all');
             document.querySelector('.three').classList.add('next');
             researcher.classList.add('current');
         }
@@ -76,7 +80,7 @@ document.querySelectorAll('.researcher').forEach((researcher)=>{
             remover();
             researcher.innerHTML=`
             <div class="imageContainer">
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/ayub.webp" alt="">
             </div>
             <div class="nameContainer">pr.Ayub Yesuf</div>
             <div class="aboutResearcher">
@@ -104,14 +108,35 @@ document.querySelectorAll('.researcher').forEach((researcher)=>{
             </div>
             `;
             document.querySelector('.one').innerHTML=`
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/ya.webp" alt="">
             `;
             document.querySelector('.two').innerHTML=`
-                <img src="../images/50082823-removebg-preview.png" alt="">
+                <img src="../images/femalere.webp" alt="">
             `;
             document.querySelector('.two').classList.add('next');
             document.querySelector('.one').classList.add('next');
+            document.querySelector('.researcherContainer').classList.remove('short');
+            document.querySelector('.allResearcher').classList.remove('all');
             researcher.classList.add('current');
+        }
+        if(researcher.classList.contains('allResearcher')){
+                        document.querySelector('.one').innerHTML=`
+                <img src="../images/ya.webp" alt="">
+            `;
+            document.querySelector('.two').innerHTML=`
+                <img src="../images/femalere.webp" alt="">
+            `;
+            document.querySelector('.three').innerHTML=`
+                <img src="../images/ayub.webp" alt="">
+            `;
+            document.querySelector('.one').classList.remove('current');
+            document.querySelector('.two').classList.remove('current');
+            document.querySelector('.three').classList.remove('current');
+            document.querySelector('.one').classList.remove('next');
+            document.querySelector('.two').classList.remove('next');
+            document.querySelector('.three').classList.remove('next');
+            document.querySelector('.researcherContainer').classList.add('short');
+            researcher.classList.add('all');
         }
     })
 })

@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_unset();
-session_decode();
-header("Location: login.html");
+session_destroy();
+echo json_encode(["logout" => "logged Out"]);

@@ -9,25 +9,27 @@
 <body>
     <div class="nav">
         <div class="profileContainer">
-            <div class="profile" onclick="Menu()"></div>
+            <div class="menu" onclick="Menu()">
+                <img src="../images/menu_9890843 (1).png" alt="">
+            </div>
             <div class="adminName" id="adminName"></div>
             
         </div>
         <div class="companyName">DRYWATCH</div>
     </div>
-    <div class="hideMenu">
-        <div id="adminNameMenu"></div>
-        <button>Log-Out</button>
+    <div class="hiddenMenu">
+        
     </div>
     <div class="panel">
-        <button>View News</button>
-        <button>Views Events</button>
+        <button onclick="allNews()">View News</button>
+        <button onclick="allEvents()">Views Events</button>
         <button onclick="postForm()">Post News</button>
         <button onclick="eventForm()">Post Event</button>
-        <button>News Post History</button>
-        <button>Events Post History</button>
+        <button onclick="getMyNews()">News Post History</button>
+        <button onclick="getMyEvent()">Events Post History</button>
     </div>
     <div class="display">
+        
     </div>
     <script src="../Scripts/admin.js"></script>
 </body>

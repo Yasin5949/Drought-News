@@ -67,13 +67,12 @@
     top:50px;
     width:45%;
     height:300px;
-    background:#ededed;
+    background:#343434;
     margin:20px;
 }
 .display .news .imageContainer{
     width:30%;
     height:100%;
-    background:grey;
 }
 .display .news .imageContainer img{
     width:100%;
@@ -87,7 +86,8 @@
     height:90%;
     text-align: center;
     align-content: center;
-    background:cyan;
+    color:#ededed;
+    background:rgba(128, 128, 128, 0.425);
 }
 .display .news .ownerContainer{
     position:absolute;
@@ -96,5 +96,5 @@
     width:60%;
     height:10%;
     text-align: right;
-    background:orange;
+    color:#ededed;
 }

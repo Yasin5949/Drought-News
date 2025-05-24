@@ -1,22 +1,22 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "droughtdb";
-$conn = new mysqli($host, $username, $password, $database);
+require_once 'db.php';
+$db = new Database();
+$conn = $db->getConnection();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Fname = $_POST['Fname'];
     $Lname = $_POST['Lname'];
     $password = $_POST['password'];
     $confirm = $_POST['confirm'];
-    $hashedPassword = Password_hash($_POST['password'], PASSWORD_DEFAULT);
     if ($password == $confirm) {
-        $stmt = $conn->prepare("INSERT INTO Researcher(Fname,Lname,hashedPassword) values(?,?,?)");
+        $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $stmt = $conn->prepare("INSERT INTO Researcher(Fname,Lname,hashedPasswod) values(?,?,?)");
         $stmt->bind_param("sss", $Fname, $Lname, $hashedPassword);
         $stmt->execute();
-        echo "Registered successfully";
+        $stmt->close();
+        $conn->close();
         header('Location: ../Pages/adminLogin.html');
+        echo "Registered successfully";
+    } else {
+        echo "password don't match";
     }
-    $stmt->close();
-    $conn->close();
 }

@@ -1,7 +1,11 @@
+body{
+    background:rgb(84, 87, 87);
+}
 .nav{
-    position:relative;
+    position:fixed;
     width:100%;
     height:50px;
+
 }
 .nav .profileContainer{
     position:absolute;
@@ -9,13 +13,16 @@
     width:200px;
     height:100%;
 }
-.nav .profileContainer .profile{
+.nav .profileContainer .menu{
     position:absolute;
-    right:5px;
+    right:20px;
     border-radius:50%;
     width:50px;
-    height:50px;
-    background:black;
+    height:40px;
+}
+.nav .profileContainer .menu img{
+    width:100%;
+    height:100%;
 }
 .nav .profileContainer .adminName{
     position:absolute;
@@ -40,7 +47,7 @@
     position:fixed;
     top:10%;
     left:0;
-    width:30%;
+    width:20%;
     height:auto;
     border-radius:20px;
 }
@@ -50,13 +57,15 @@
     border:none;
     font-size: larger;
     color:#ededed;
-    background:#252525;
+    background:none;
     transition:0.3s;
+    border-right:2px solid snow;
+    text-align: left;
 }
 .panel button:hover{
-    transform:scale(1.1);
     background:#ededed;
-    color:#252525;
+    text-align: center;
+    color:#343434;
 }
 .display{
     position:fixed;
@@ -64,13 +73,14 @@
     right:0;
     width:69%;
     height:90%;
+    overflow: auto;
 }
 .display #news{
     position:absolute;
     top:calc(50% - 300px);
     left:calc(50% - 200px);
     width:400px;
-    height:400px;
+    height:auto;
     text-align: center;
     align-content: center;
     color:#ededed;
@@ -99,36 +109,91 @@
     align-content: center;
     font-size: large;
 }
-.hideMenu{
-    width:0;
-    height:0;
-}
-.menu{
+.hiddenMenu{
     position:fixed;
+    top:50px;
     right:25px;
     width:100px;
-    height:80px;
+    height:auto;
     border-radius:10px;
     background:black;
     display:grid;
     overflow: hidden;
 }
-.menu #adminNameMenu{
+.hiddenMenu button{
     position:relative;
     bottom:0;
     width:100%;
-    height:55%;
-    font-size: larger;
-    color:#ededed;
-}
-.menu button{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:45%;
+    height:45px;
     background:#252525;
     border:none;
     color:red;
     margin:0;
     cursor: pointer;
+}
+.display .newsContainer{
+    position:relative;
+    left:10%;
+    top:20px;
+    margin-bottom:30px;
+    width:80%;
+    height:300px;
+    background:#343434;
+    border-radius:10px;
+}
+.display .eventContainer .topic{
+    position:absolute;
+    left:3%;
+    width:90%;
+    height:15%;
+    text-align: center;
+    align-content: center;
+    color:#ededed;
+    font-size: large;
+}
+.display .eventContainer .date{
+    position:absolute;
+    top:15%;
+    left:3%;
+    width:90%;
+    height:5%;
+    text-align: right;
+    color:#ededed;
+}
+.display .newsContainer .newsImage{
+    position:absolute;
+    left:2%;
+    bottom:10%;
+    width:40%;
+    height:70%;
+}
+.display .newsContainer .newsImage img{
+    width:100%;
+    height:100%;
+}
+.display .newsContainer .message{
+    position:absolute;
+    right:2%;
+    bottom:10%;
+    width:55%;
+    height:70%;
+    text-align: center;
+    align-content: center;
+    color:#ededed;
+    background:rgba(102, 99, 99, 0.514);
+}
+.display .newsContainer .postedBy{
+    position:absolute;
+    bottom:0;
+    right:20px;
+    width:200px;
+    height:30px;
+    text-align: center;
+    align-content: center;
+    color:#ededed;
+    background:rgb(87, 88, 88);
+}
+.display .eventContainer{
+    height:400px;
+    background:#343434
 }
